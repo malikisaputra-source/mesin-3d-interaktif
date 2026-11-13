@@ -1,0 +1,29 @@
+/* kredit-maliki: Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Lisensi MIT + wajib atribusi (lihat LICENSE). */
+:root{--latar:#0c1117;--panel:rgba(17,24,33,.88);--garis:#263241;--teks:#e8eef5;--redup:#93a3b5;--hisap:#38bdf8;--kompresi:#a78bfa;--usaha:#f97316;--buang:#9ca3af;--r:14px;font-family:"Space Grotesk",system-ui,sans-serif}
+*{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:radial-gradient(circle at 40% 30%,#1a2533,#0c1117 70%);color:var(--teks)}
+#kanvas{position:fixed;inset:0}
+.proto{position:fixed;top:12px;left:12px;max-width:min(520px,calc(100% - 24px));font-size:12.5px;background:rgba(60,46,10,.9);color:#fde68a;border:1px solid #6b5517;border-radius:10px;padding:8px 12px;z-index:3}
+.panel{position:fixed;top:12px;right:12px;width:320px;max-height:calc(100% - 24px);overflow:auto;background:var(--panel);backdrop-filter:blur(8px);border:1px solid var(--garis);border-radius:var(--r);padding:16px;z-index:3}
+h1{margin:0 0 10px;font-size:22px}
+.langkah{display:grid;gap:6px}
+.langkah div{border:1px solid var(--garis);border-radius:10px;padding:8px 10px;transition:background .3s,border-color .3s,transform .3s;opacity:.6}
+.langkah b{display:block;font-size:14px}.langkah span{font-size:12.5px;color:var(--redup)}
+.langkah div.aktif{opacity:1;transform:translateX(-4px)}
+.langkah div[data-l="0"].aktif{border-color:var(--hisap);background:rgba(56,189,248,.12)}
+.langkah div[data-l="1"].aktif{border-color:var(--kompresi);background:rgba(167,139,250,.12)}
+.langkah div[data-l="2"].aktif{border-color:var(--usaha);background:rgba(249,115,22,.14)}
+.langkah div[data-l="3"].aktif{border-color:var(--buang);background:rgba(156,163,175,.14)}
+.sudut{margin:12px 0 6px;font-size:13px;color:var(--redup)}.sudut b{color:var(--teks);font-variant-numeric:tabular-nums}
+.geser{display:block;font-size:14px}.geser input{width:100%;margin-top:6px;accent-color:var(--usaha);height:28px}
+small{color:var(--redup);font-size:12px}
+.tombol{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.tombol button{min-height:44px;border-radius:10px;border:1px solid var(--garis);background:#1b2532;color:var(--teks);font:600 14px inherit;font-family:inherit;cursor:pointer;transition:background .2s,transform .1s}
+.tombol button:hover{background:#243142}.tombol button:active{transform:scale(.97)}
+.tombol button[aria-pressed="true"]{background:#7c2d12;border-color:var(--usaha)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--usaha);outline-offset:2px}
+.kredit-maliki{font-size:12px;opacity:.7;margin:12px 0 0;text-align:center}.kredit-maliki a{color:inherit}
+#label{position:fixed;inset:0;pointer-events:none;z-index:2}
+.lbl{position:absolute;transform:translate(-50%,-50%);font-size:12px;font-weight:600;background:rgba(12,17,23,.78);border:1px solid var(--garis);border-radius:999px;padding:3px 9px;white-space:nowrap}
+.galat{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:#3b0d0d;border:1px solid #7f1d1d;padding:14px 18px;border-radius:12px;z-index:4;max-width:90%}
+@media (max-width:760px){.panel{top:auto;bottom:0;right:0;left:0;width:auto;max-height:46%;border-radius:var(--r) var(--r) 0 0}.langkah span{display:none}.proto{font-size:11.5px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

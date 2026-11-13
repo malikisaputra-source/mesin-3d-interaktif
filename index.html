@@ -1,0 +1,48 @@
+<!doctype html>
+<!-- kredit-maliki: Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Lisensi MIT + wajib atribusi (lihat LICENSE). -->
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesin 4-Tak 3D</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="kanvas" aria-label="Model 3D mesin 4-tak" role="img"></div>
+<div class="proto" role="note"><b>Prototipe:</b> model edukasi sederhana dari bentuk dasar (silinder & kotak), bukan gambar teknik. Proporsi, waktu buka katup, dan pengapian disederhanakan.</div>
+<aside class="panel">
+  <h1>Mesin 4-Tak</h1>
+  <div class="langkah" id="langkah">
+    <div data-l="0"><b>1. Hisap</b><span>Piston turun, katup hisap buka, campuran udara-bensin masuk.</span></div>
+    <div data-l="1"><b>2. Kompresi</b><span>Kedua katup tutup, piston naik memampatkan campuran.</span></div>
+    <div data-l="2"><b>3. Usaha</b><span>Busi memercik, ledakan mendorong piston turun memutar poros engkol.</span></div>
+    <div data-l="3"><b>4. Buang</b><span>Katup buang buka, piston naik mendorong gas sisa keluar.</span></div>
+  </div>
+  <div class="sudut">Sudut engkol <b id="sudut">0°</b> / 720°</div>
+  <label class="geser">RPM tampilan <b id="nilaiRpm">30</b>
+    <input type="range" id="rpm" min="0" max="240" step="5" value="30" aria-describedby="ketRpm">
+  </label>
+  <small id="ketRpm">Diperlambat agar terlihat. Mesin asli langsam ±1.000–1.500 rpm.</small>
+  <div class="tombol">
+    <button id="btnJalan" aria-pressed="true">⏸ Jeda</button>
+    <button id="btnLangkah">Langkah +</button>
+    <button id="btnTembus" aria-pressed="false">Transparan</button>
+    <button id="btnPotong" aria-pressed="false">Potongan</button>
+    <button id="btnLabel" aria-pressed="true">Label</button>
+  </div>
+  <p class="kredit-maliki">Template oleh <a href="https://malikisaputra.biz.id" target="_blank" rel="noopener">@malikisaputra</a></p>
+</aside>
+<div id="label"></div>
+<div class="galat" id="galat" hidden>Model 3D gagal dimuat. Pastikan ada internet (Three.js dari CDN) dan browser mendukung WebGL.</div>
+<script type="module" src="app.js"></script>
+<script>setTimeout(function(){ if(!window.__mesinOK) document.getElementById("galat").hidden=false; }, 8000);</script>
+</body>
+</html>
