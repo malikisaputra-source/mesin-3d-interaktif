@@ -1,4 +1,4 @@
-/* kredit-maliki: Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Lisensi MIT + wajib atribusi (lihat LICENSE). */
+/* kredit-maliki: Template oleh Maliki Saputra (@malikisaputra) — https://malikisaputra.biz.id. Lisensi Nonkomersial Maliki Studio: wajib kredit, dilarang dijual (lihat LICENSE). */
 :root{--latar:#0c1117;--panel:rgba(17,24,33,.88);--garis:#263241;--teks:#e8eef5;--redup:#93a3b5;--hisap:#38bdf8;--kompresi:#a78bfa;--usaha:#f97316;--buang:#9ca3af;--r:14px;font-family:"Space Grotesk",system-ui,sans-serif}
 *{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:radial-gradient(circle at 40% 30%,#1a2533,#0c1117 70%);color:var(--teks)}
 #kanvas{position:fixed;inset:0}

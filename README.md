@@ -44,7 +44,7 @@ Warna fase di `style.css` (`--hisap`, `--kompresi`, `--usaha`, `--buang`) dan `W
 - ui-ux-pro-max — https://github.com/nextlevelbuilder/ui-ux-pro-max-skill (MIT menurut GitHub API, dicek 6 Nov 2026)
 
 ## Lisensi
-MIT + syarat atribusi (lihat `LICENSE`). Three.js © three.js authors, lisensi MIT, dimuat dari CDN.
+Lisensi Nonkomersial Maliki Studio: gratis untuk belajar & usaha/organisasi sendiri, **dilarang dijual/dijual ulang atau dipakai untuk jasa berbayar**, kredit wajib dipertahankan. Lihat `LICENSE`.
 
 Dibuat oleh Maliki Studio — malikisaputra.biz.id, follow TikTok/IG @malikisaputra
 
